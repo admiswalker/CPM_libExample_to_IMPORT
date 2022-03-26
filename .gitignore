@@ -1,8 +1,8 @@
 exe
 googletest-master/
-CPM_libExample_to_IMPORT/include/
-CPM_libExample_to_IMPORT/lib/
-CPM_libExample_to_IMPORT/tmpMake/
+cpmex/include/
+cpmex/lib/
+cpmex/tmpMake/
 
 tmpDir/
 tmp*/
