@@ -19,9 +19,9 @@ jobs:
     - name: Build googletest
       run: |
         make ./googletest-master/build/lib/libgtest.a
-    - name: Build SSTD
+    - name: Build CPMEX
       run: |
-        make FORCE_SSTD
+        make FORCE_CPMEX
     - name: Build the others
       run: |
         make
