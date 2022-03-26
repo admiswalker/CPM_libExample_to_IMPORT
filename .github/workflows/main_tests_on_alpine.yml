@@ -1,4 +1,4 @@
-name: Tests on Alpine (Build Only)
+name: Tests on Alpine
 
 on:
   push:
