@@ -26,6 +26,6 @@ jobs:
     - name: Build the others
       run: |
         make
-#    - name: Run tests
-#      run: |
-#        ./exe
+    - name: Run tests
+      run: |
+        ./exe
