@@ -12,10 +12,6 @@ jobs:
     steps:
     - name: checkout repository
       uses: actions/checkout@v2
-    - name: Install Python
-      run: |
-        pip install numpy
-        pip install matplotlib
     - name: Build googletest
       run: |
         make ./googletest-master/build/lib/libgtest.a

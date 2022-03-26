@@ -17,9 +17,6 @@ jobs:
     - name: Install build tools
       run: |
         apk add make gcc g++ cmake
-        #apk add python3 py3-pip
-        #pip install numpy
-        #pip install matplotlib
     - name: Build googletest
       run: |
         make ./googletest-master/build/lib/libgtest.a
