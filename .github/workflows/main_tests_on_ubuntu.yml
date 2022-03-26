@@ -1,0 +1,30 @@
+name: Tests on Ubuntu
+
+on:
+  push:
+    branches: [ main, master, dev, develop ]
+  pull_request:
+    branches: [ main, master, dev, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+    - name: Install Python
+      run: |
+        pip install numpy
+        pip install matplotlib
+    - name: Build googletest
+      run: |
+        make ./googletest-master/build/lib/libgtest.a
+    - name: Build SSTD
+      run: |
+        make FORCE_SSTD
+    - name: Build the others
+      run: |
+        make
+    - name: Run tests
+      run: |
+        ./exe

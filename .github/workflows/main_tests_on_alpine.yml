@@ -1,0 +1,34 @@
+name: Tests on Alpine (Build Only)
+
+on:
+  push:
+    branches: [ main, master, dev, develop ]
+  pull_request:
+    branches: [ main, master, dev, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    container:
+      image: crystallang/crystal:latest-alpine
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+    - name: Install build tools
+      run: |
+        apk add make gcc g++ cmake
+        #apk add python3 py3-pip
+        #pip install numpy
+        #pip install matplotlib
+    - name: Build googletest
+      run: |
+        make ./googletest-master/build/lib/libgtest.a
+    - name: Build SSTD
+      run: |
+        make FORCE_SSTD
+    - name: Build the others
+      run: |
+        make
+#    - name: Run tests
+#      run: |
+#        ./exe
