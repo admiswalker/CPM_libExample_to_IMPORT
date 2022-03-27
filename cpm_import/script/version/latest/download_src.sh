@@ -6,7 +6,7 @@ CPM_CALL_DIR=`pwd -P`
 
 
 URL=https://github.com/admiswalker/CPM_libExample_to_IMPORT/archive/refs/heads/main.zip
-fName=cpmex-0.1.0.zip
+fName='cpmex-latest.zip'
 fName_base=${fName%.*}   # <libName>-<version>
 libName=${fName_base%-*} # <libName>
 ver=${fName_base#*-}     # <version>
