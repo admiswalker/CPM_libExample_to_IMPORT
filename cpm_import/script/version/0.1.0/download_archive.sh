@@ -15,7 +15,7 @@ ver=${fName_base#*-*-}    # <version>
 
 
 URL_hash=https://github.com/admiswalker/CPM_libExample_to_IMPORT/raw/main/cpm_import/archive/amd64/cpmex/0.1.0/amd64-cpmex-0.1.0-sha256sum.txt
-fName_hash=${URL_hash##*/} # amd64-m4-1.4.15-sha256sum.txt
+fName_hash=${URL_hash##*/} # <architecture>-<libName>-<version>-sha256sum.txt
 
 
 cfn_echo_download_begin $libName $ver

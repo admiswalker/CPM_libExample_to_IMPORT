@@ -23,7 +23,7 @@ fi
 
 # installation
 if [ `cfn_isInstalled` = 'false' ]; then
-    cd $CPM_BUILD_DIR/CPM_libExample_to_IMPORT-cpmex-$ver/$libName;
+    cd $CPM_BUILD_DIR/CPM_libExample_to_IMPORT-$fName_base/$libName;
     
     make -j
 
