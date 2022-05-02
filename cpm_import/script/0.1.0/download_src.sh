@@ -18,9 +18,6 @@ ver=${fName_base#*-}     # <version>
 fName_hash=$libName-$ver-sha256sum.txt # <libName>-<version>-sha256sum.txt
 
 
-cfn_echo_download_begin $libName $ver
-
-
 # downloading source file
 if [ ! -e $CPM_CACHE_DIR/$fName ]; then
     mkdir -p $CPM_CACHE_DIR
@@ -31,6 +28,3 @@ if [ ! -e $CPM_CACHE_DIR/$fName_hash ]; then
     echo '5f32b026f9ed5fbf984d37a06e7f24f14cf5137091f33f76407813a027323745  cpmex-0.1.0.tar.gz' > $CPM_CACHE_DIR/$fName_hash
 fi
 cfn_check_hash_value
-
-
-cfn_echo_download_end $libName $ver

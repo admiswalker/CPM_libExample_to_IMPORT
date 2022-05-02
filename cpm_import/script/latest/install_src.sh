@@ -10,7 +10,6 @@ fName='cpmex-latest.zip'
 fName_base=${fName%.*}   # <libName>-<version>
 libName=${fName_base%-*} # <libName>
 ver=${fName_base#*-}     # <version>
-cfn_echo_install_begin $libName $ver
 
 
 # unpacking the archive file
@@ -32,6 +31,3 @@ if [ `cfn_isInstalled` = 'false' ]; then
     cp -r lib/* -t $CPM_INST_WDIR/lib
     cp -r include/* -t $CPM_INST_WDIR/include
 fi
-
-
-cfn_echo_install_end $libName $ver

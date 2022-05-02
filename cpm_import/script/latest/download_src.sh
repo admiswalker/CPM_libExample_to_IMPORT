@@ -17,9 +17,6 @@ ver=${fName_base#*-}     # <version>
 fName_hash=$libName-$ver-sha256sum.txt # <libName>-<version>-sha256sum.txt
 
 
-cfn_echo_download_begin $libName $ver
-
-
 # downloading source file
 if [ ! -e $CPM_CACHE_DIR/$fName ]; then
     mkdir -p $CPM_CACHE_DIR
@@ -29,6 +26,3 @@ fi
 #    wget -P $CPM_CACHE_DIR $URL_hash
 #fi
 #cfn_check_hash_value
-
-
-cfn_echo_download_end $libName $ver
