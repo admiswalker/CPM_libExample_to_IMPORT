@@ -25,6 +25,6 @@ if [ ! -e $CPM_CACHE_DIR/$fName ]; then
 fi
 if [ ! -e $CPM_CACHE_DIR/$fName_hash ]; then
 #    wget -P $CPM_CACHE_DIR $URL_hash
-    echo '5f32b026f9ed5fbf984d37a06e7f24f14cf5137091f33f76407813a027323745  cpmex-0.1.0.tar.gz' > $CPM_CACHE_DIR/$fName_hash
+    echo 'f9ffc9aa9d29d4a653522a235ae433a1afa9dfa7063b940c7235b8cfae84803d  cpmex-0.1.0.tar.gz' > $CPM_CACHE_DIR/$fName_hash
 fi
 cfn_check_hash_value
